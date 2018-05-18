@@ -1,6 +1,6 @@
 {
   "name": "react-native-youtube-info",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gets youtube info from crackpot URL (http://www.youtube.com/get_video_info)",
   "main": "dist/index.js",
   "scripts": {
