@@ -1,0 +1,34 @@
+{
+  "name": "react-native-youtube-info",
+  "version": "0.0.1",
+  "description": "Gets youtube info from crackpot URL (http://www.youtube.com/get_video_info)",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "exit 0",
+    "compile": "babel --no-babelrc --presets=env src --out-dir dist --plugins=add-module-exports",
+    "prepublish": "npm run compile",
+    "prepare": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aajiwani/react-native-youtube-info.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "youtube",
+    "react-native",
+    "youtube-info"
+  ],
+  "author": "Amir Ali Jiwani <amirali.jiwani89@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aajiwani/react-native-youtube-info/issues"
+  },
+  "homepage": "https://github.com/aajiwani/react-native-youtube-info#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.7.0"
+  }
+}
