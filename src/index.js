@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+import axios from "axios";
 import { parse } from "querystring";
 import _ from "lodash";
 
@@ -130,8 +130,9 @@ export default class Youtube {
 
     for (let image of images.thumbnails) {
       proms.push(
-        fetch(image.url, {
+        axios({
           method: "HEAD",
+          url: image.url,
           cache: "no-cache"
         }).then(response => {
           if (response.status === 200) {
@@ -144,8 +145,9 @@ export default class Youtube {
 
     for (let image of images.big) {
       proms.push(
-        fetch(image.url, {
+        axios({
           method: "HEAD",
+          url: image.url,
           cache: "no-cache"
         }).then(response => {
           if (response.status === 200) {
@@ -236,11 +238,11 @@ export default class Youtube {
    */
   static getVideoInfo(youtubeId) {
     let youtubeUrl = Youtube._crackpotUrl(youtubeId);
-    return fetch(youtubeUrl)
+    return axios.get(youtubeUrl)
       .then(response => {
         // If we get a positive response, lets take it an try getting the information out
         if (response.status === 200) {
-          return response.text();
+          return response.data;
         } else {
           throw new Error("Response code is not acceptable to proceed further");
         }
