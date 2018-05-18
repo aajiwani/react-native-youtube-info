@@ -22,26 +22,31 @@ import Youtube from "react-native-youtube-info";
 
 let videoInfo = Youtube.getVideoInfo("2MpUj-Aua48");
 
-// Methods
+videoInfo.then(youtubeObj => {
 
-// Fetch Highest Quality Available Image
-videoInfo.getHighestQualityImage();
+    // Methods
 
-// Fetch Highest Quality Available Video
-videoInfo.getHighestQualityVideo();
+    // Fetch Highest Quality Available Image
+    youtubeObj.getHighestQualityImage();
 
-// Fetch Lowest Quality Available Image
-videoInfo.getLowestQualityImage();
+    // Fetch Highest Quality Available Video
+    youtubeObj.getHighestQualityVideo();
 
-// Fetch Lowest Quality Available Video
-videoInfo.getLowestQualityVideo();
+    // Fetch Lowest Quality Available Image
+    youtubeObj.getLowestQualityImage();
 
-// Properties
-videoInfo.title
-videoInfo.author
-videoInfo.keywords
-videoInfo.player_response
-videoInfo.status
-videoInfo.list_videos
-videoInfo.images
+    // Fetch Lowest Quality Available Video
+    youtubeObj.getLowestQualityVideo();
+
+    // Properties
+    youtubeObj.title
+    youtubeObj.author
+    youtubeObj.keywords
+    youtubeObj.player_response
+    youtubeObj.status
+    youtubeObj.list_videos
+    youtubeObj.images
+
+});
+
 ```

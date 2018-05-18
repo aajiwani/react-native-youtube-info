@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.10",
-    "node-fetch": "^2.1.2"
+    "node-fetch": "^2.1.2",
+    "querystring": "^0.2.0"
   }
 }
