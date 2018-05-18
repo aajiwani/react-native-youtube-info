@@ -4,10 +4,10 @@
   "description": "Gets youtube info from crackpot URL (http://www.youtube.com/get_video_info)",
   "main": "dist/index.js",
   "scripts": {
-    "test": "exit 0",
     "compile": "babel --no-babelrc --presets=env src --out-dir dist --plugins=add-module-exports",
     "prepublish": "npm run compile",
-    "prepare": "npm run compile"
+    "prepare": "npm run compile",
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,9 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "node-fetch": "^2.1.2"
   }
 }
