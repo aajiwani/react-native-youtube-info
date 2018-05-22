@@ -128,7 +128,7 @@ export default class Youtube {
     let proms = [];
     let images = body.images;
 
-    for (let image of images.thumbnails) {
+    _.forEach(images.thumbnails, function(image) {
       proms.push(
         axios({
           method: "HEAD",
@@ -141,9 +141,9 @@ export default class Youtube {
           return false;
         })
       );
-    }
+    });
 
-    for (let image of images.big) {
+    _.forEach(images.big, function(image) {
       proms.push(
         axios({
           method: "HEAD",
@@ -156,7 +156,7 @@ export default class Youtube {
           return false;
         })
       );
-    }
+    });
 
     return Promise.all(proms).then(values => {
       images = _.filter(values, function(item) {
